@@ -29,4 +29,21 @@ function getTotal(list)
 	return total;
 }
 
-console.log(getTotal(list))
+
+function setList(list)
+{
+	var table = '<thead><tr><td>Description</td><td>Amount</td><td>Value</td><td>Action</td>'
+				+ '</tr>'
+			+ '</thead>'
+			+ '<tbody>';
+
+	for (var i in list) {
+		table += '<tr><td>'+ list[i].desc +'</td><td>'+ list[i].amount +'</td><td>'+ list[i].value +'</td>'+'<td>Edit | Delete</td></tr>'
+	}
+
+	table += '</tbody>';
+
+	document.getElementById('listTable').innerHTML = table;
+}
+
+setList(list);
