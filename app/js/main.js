@@ -82,7 +82,6 @@ function updateData(data)
 {
 	var id = edited;
 
-	console.log(id)
 	list[id].desc   = document.getElementById('desc').value;
 	list[id].amount = document.getElementById('amount').value;
 	list[id].value  = document.getElementById('value').value;
@@ -98,6 +97,7 @@ function clearForm()
 	document.getElementById('amount').value = '';	
 }
 
+
 function checkUndefinedData(data)
 {
 	if (data == 'undefined') {
@@ -105,6 +105,12 @@ function checkUndefinedData(data)
 	}
 
 	return false;
+}
+
+function deleteData(id)
+{
+	list.splice(id, 1); 
+	setList(list);
 }
 
 
