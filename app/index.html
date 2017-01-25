@@ -64,6 +64,30 @@
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>	
+
+	<div class="container-fluid">
+		<div class="form-inline">
+			<div class="form-group">
+				<input type="text" class="form-control" id="desc" placeholder="Description">
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" id="amount" placeholder="Amount">
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" id="value" placeholder="Value">
+			</div>
+
+			<span id="btnUpdate">
+				<button class="btn btn-default" onclick="updateData();">Save</button>
+				<button class="btn btn-default" onclick="clearForm();">Cancel</button>
+			</span>
+
+			<button class="btn btn-default" onclick="addData();" id="btnAdd">Add</button>
+		</div>
+		<table id="listTable" class="table">
+			
+		</table>
+	</div>
 	
 
 	<script type="text/javascript" src="js/config.js"></script>
