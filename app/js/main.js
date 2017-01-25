@@ -51,6 +51,7 @@ function setList(list)
 	table += '</tbody>';
 
 	document.getElementById('listTable').innerHTML = table;
+	saveDataStorage(list);
 }
 
 function addData(data)
@@ -113,5 +114,23 @@ function deleteData(id)
 	setList(list);
 }
 
+function saveDataStorage(list)
+{
+	var jsonStr = JSON.stringify(list);
+	localStorage.setItem('list', jsonStr);
+}
 
-setList(list);
+
+function initDataStorage()
+{
+	var check = localStorage.getItem('list');
+
+	if (check) {
+		list = JSON.parse(check);
+	}
+
+	setList(list);
+}
+
+
+initDataStorage();
